@@ -5,6 +5,7 @@ import datetime
 
 def transcribe_audio(provider, language):
     r = sr.Recognizer()
+    r.pause_threshold = 2
     with sr.Microphone() as source:
         st.info("Please speak into the microphone...")
         try:
